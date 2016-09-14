@@ -8,7 +8,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlarmIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -34,7 +33,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDp-yw-9ZB">
                                 <rect key="frame" x="169" y="266" width="151" height="214"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="About"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v89-tA-gQR">
                                 <rect key="frame" x="0.0" y="183" width="169" height="297"/>
@@ -45,6 +44,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1139" y="173"/>
         </scene>
@@ -64,9 +64,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="05:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAc-yb-45b">
-                                            <rect key="frame" x="16" y="8" width="76" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="05:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAc-yb-45b">
+                                            <rect key="frame" x="16" y="6" width="76" height="30.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Giv-DT-fHc">
+                                            <rect key="frame" x="254" y="3" width="58" height="35.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8md-2k-ic0">
+                                            <rect key="frame" x="100" y="10" width="103" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -85,7 +94,11 @@
                                 <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="coverVertical" id="Vbv-7k-KPa"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="k9o-mb-L2B"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="k9o-mb-L2B">
+                            <connections>
+                                <segue destination="Rg3-zX-Gn8" kind="modal" id="Iz7-bH-KxC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
@@ -93,10 +106,50 @@
             </objects>
             <point key="canvasLocation" x="2015" y="145"/>
         </scene>
+        <!--World-->
+        <scene sceneID="Nrh-HN-Amh">
+            <objects>
+                <tableViewController id="sLG-V7-JX7" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cqQ-zV-Hss">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Dde-22-e2g">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bXL-QP-Zd5">
+                                <rect key="frame" x="0.0" y="136" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bXL-QP-Zd5" id="Uxf-Bt-EGR">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sLG-V7-JX7" id="oFe-jl-IJl"/>
+                            <outlet property="delegate" destination="sLG-V7-JX7" id="XFi-Xl-kdp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="World" id="C9w-JO-ray">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="iyM-AJ-dPU">
+                            <connections>
+                                <segue destination="Yba-Np-S7E" kind="modal" id="ECj-sb-lFN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CcZ-WZ-XVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725" y="145"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="460-W0-Ews">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jHm-DX-I97" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dpM-yh-kWc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -109,6 +162,7 @@
                         <segue destination="Yba-Np-S7E" kind="relationship" relationship="rootViewController" id="T5S-8F-ULD"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHm-DX-I97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1601" y="-109"/>
         </scene>
@@ -147,12 +201,124 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ck9-xT-cZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1945" y="736"/>
+            <point key="canvasLocation" x="2757" y="736"/>
+        </scene>
+        <!--alarm-->
+        <scene sceneID="Vcg-Pn-Srh">
+            <objects>
+                <viewController id="T8u-fd-LEy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YZX-Gs-pQm"/>
+                        <viewControllerLayoutGuide type="bottom" id="7O6-zj-0sy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="txO-P7-zCr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-wV-GlW">
+                                <rect key="frame" x="0.0" y="64" width="320" height="139"/>
+                                <date key="date" timeIntervalSinceReferenceDate="495538148.08703601">
+                                    <!--2016-09-14 09:29:08 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg9-ge-dao">
+                                <rect key="frame" x="21" y="395" width="44" height="30"/>
+                                <state key="normal" title="Sound"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk6-LF-ILI">
+                                <rect key="frame" x="20" y="340" width="45" height="30"/>
+                                <state key="normal" title="Title"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kht-VT-O6K">
+                                <rect key="frame" x="42" y="225" width="30" height="30"/>
+                                <state key="normal" title="Tu"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEv-bH-Ufo">
+                                <rect key="frame" x="71" y="225" width="30" height="30"/>
+                                <state key="normal" title="We"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w81-7Y-pzp">
+                                <rect key="frame" x="100" y="225" width="30" height="30"/>
+                                <state key="normal" title="Th"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvs-Pw-Kg2">
+                                <rect key="frame" x="129" y="225" width="30" height="30"/>
+                                <state key="normal" title="Fr"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwu-TI-E7c">
+                                <rect key="frame" x="158" y="225" width="30" height="30"/>
+                                <state key="normal" title="Sa"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1A-FT-ppC">
+                                <rect key="frame" x="187" y="225" width="30" height="30"/>
+                                <state key="normal" title="Su"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoM-ha-Eoy">
+                                <rect key="frame" x="13" y="225" width="30" height="30"/>
+                                <state key="normal" title="Mo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwa-jR-BO9">
+                                <rect key="frame" x="247" y="225" width="61" height="30"/>
+                                <state key="normal" title="check all"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lub-MR-j84">
+                                <rect key="frame" x="20" y="288" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="alarm" id="9Xj-zZ-C0g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ZtA-3d-D4m"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMm-wj-s5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3506" y="736"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VCC-hq-TYx">
+            <objects>
+                <viewController id="qHU-Jm-jDW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fc3-7R-Zbi"/>
+                        <viewControllerLayoutGuide type="bottom" id="dza-UU-E8o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7IB-1C-Klf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vux-qT-5s1">
+                                <rect key="frame" x="41" y="179" width="35" height="30"/>
+                                <state key="normal" title="reset"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03g-Py-GnS">
+                                <rect key="frame" x="65" y="20" width="191" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WmR-fS-FY3">
+                                <rect key="frame" x="41" y="252" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42N-Rz-vyf">
+                                <rect key="frame" x="233" y="179" width="32" height="30"/>
+                                <state key="normal" title="start"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mcl-tm-F1N"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0q-Ao-WEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="761"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D9J-li-2dw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tJX-wS-a4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AvG-PW-bKb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -165,11 +331,73 @@
                         <segue destination="xHB-cI-3yB" kind="relationship" relationship="rootViewController" id="lhI-i0-qxM"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJX-wS-a4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="532"/>
+            <point key="canvasLocation" x="2370" y="532"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jfe-xM-BLW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rg3-zX-Gn8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wqX-lf-6rh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sLG-V7-JX7" kind="relationship" relationship="rootViewController" id="vDv-CP-QtY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQw-oD-mDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="145"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Gc-zZ-LfF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wNy-LS-Sfu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qHp-Ik-Drn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T8u-fd-LEy" kind="relationship" relationship="rootViewController" id="2bz-Kz-KtX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mfi-SK-KEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3163" y="736"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cQQ-pf-yx2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tQn-2B-xcc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SAP-6R-gXZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qHU-Jm-jDW" kind="relationship" relationship="rootViewController" id="1ZO-Se-Ud0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRV-Oi-aGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="761"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clock-icon.png" width="128" height="128"/>
+    </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ECj-sb-lFN"/>
         <segue reference="Vbv-7k-KPa"/>
     </inferredMetricsTieBreakers>
 </document>

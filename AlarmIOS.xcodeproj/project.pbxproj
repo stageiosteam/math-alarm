@@ -19,6 +19,8 @@
 		860293531D8931FF007672AF /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8602934F1D8931FF007672AF /* 2.jpeg */; };
 		860293541D8931FF007672AF /* h1.png in Resources */ = {isa = PBXBuildFile; fileRef = 860293501D8931FF007672AF /* h1.png */; };
 		860293551D8931FF007672AF /* Wazowski.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 860293511D8931FF007672AF /* Wazowski.jpg */; };
+		C2ABD0A81D8949DE001F07CD /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ABD0A71D8949DE001F07CD /* Alarm.swift */; };
+		C2ABD0AA1D894A10001F07CD /* math_alarm.db in Resources */ = {isa = PBXBuildFile; fileRef = C2ABD0A91D894A10001F07CD /* math_alarm.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		8602934F1D8931FF007672AF /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
 		860293501D8931FF007672AF /* h1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h1.png; sourceTree = "<group>"; };
 		860293511D8931FF007672AF /* Wazowski.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wazowski.jpg; sourceTree = "<group>"; };
+		C2ABD0A71D8949DE001F07CD /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		C2ABD0A91D894A10001F07CD /* math_alarm.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = math_alarm.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				860293241D891DBF007672AF /* Assets.xcassets */,
 				860293261D891DBF007672AF /* LaunchScreen.storyboard */,
 				860293291D891DBF007672AF /* Info.plist */,
+				C2ABD0A71D8949DE001F07CD /* Alarm.swift */,
+				C2ABD0A91D894A10001F07CD /* math_alarm.db */,
 			);
 			path = AlarmIOS;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2ABD0AA1D894A10001F07CD /* math_alarm.db in Resources */,
 				8602934C1D892C8D007672AF /* wazowskiAlarm.png in Resources */,
 				860293281D891DBF007672AF /* LaunchScreen.storyboard in Resources */,
 				860293551D8931FF007672AF /* Wazowski.jpg in Resources */,
@@ -289,6 +296,7 @@
 			files = (
 				860293201D891DBF007672AF /* ViewController.swift in Sources */,
 				8602931E1D891DBF007672AF /* AppDelegate.swift in Sources */,
+				C2ABD0A81D8949DE001F07CD /* Alarm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +523,7 @@
 				860293441D891DBF007672AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		860293451D891DBF007672AF /* Build configuration list for PBXNativeTarget "AlarmIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +532,7 @@
 				860293471D891DBF007672AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		860293481D891DBF007672AF /* Build configuration list for PBXNativeTarget "AlarmIOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +541,7 @@
 				8602934A1D891DBF007672AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

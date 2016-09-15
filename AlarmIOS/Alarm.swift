@@ -17,7 +17,7 @@ class Alarm {
     var Hour: Int = -1
     var Minute: Int = -1
     var Description: String = ""
-    var Repeat: DayOfWeek? = nil
+    var Repeat: [DayOfWeek] = [DayOfWeek]()
     var Sound: String = ""
     var Status: Bool = false     // is activated
 }

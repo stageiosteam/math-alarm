@@ -19,6 +19,12 @@
 		860293531D8931FF007672AF /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8602934F1D8931FF007672AF /* 2.jpeg */; };
 		860293541D8931FF007672AF /* h1.png in Resources */ = {isa = PBXBuildFile; fileRef = 860293501D8931FF007672AF /* h1.png */; };
 		860293551D8931FF007672AF /* Wazowski.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 860293511D8931FF007672AF /* Wazowski.jpg */; };
+		C29126351D8A9E9A00822714 /* more-than.png in Resources */ = {isa = PBXBuildFile; fileRef = C29126341D8A9E9A00822714 /* more-than.png */; };
+		C29126371D8AA0E600822714 /* check-mark-red.png in Resources */ = {isa = PBXBuildFile; fileRef = C29126361D8AA0E600822714 /* check-mark-red.png */; };
+		C29126391D8AA2DA00822714 /* SQLiteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29126381D8AA2DA00822714 /* SQLiteHelper.swift */; };
+		C291263B1D8AA31800822714 /* AlarmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C291263A1D8AA31800822714 /* AlarmRepository.swift */; };
+		C291263D1D8AA33800822714 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C291263C1D8AA33800822714 /* NotificationHelper.swift */; };
+		C291263F1D8AAA4C00822714 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C291263E1D8AAA4C00822714 /* libsqlite3.0.tbd */; };
 		C2ABD0A81D8949DE001F07CD /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ABD0A71D8949DE001F07CD /* Alarm.swift */; };
 		C2ABD0AA1D894A10001F07CD /* math_alarm.db in Resources */ = {isa = PBXBuildFile; fileRef = C2ABD0A91D894A10001F07CD /* math_alarm.db */; };
 /* End PBXBuildFile section */
@@ -59,6 +65,13 @@
 		8602934F1D8931FF007672AF /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
 		860293501D8931FF007672AF /* h1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h1.png; sourceTree = "<group>"; };
 		860293511D8931FF007672AF /* Wazowski.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wazowski.jpg; sourceTree = "<group>"; };
+		C29126341D8A9E9A00822714 /* more-than.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-than.png"; sourceTree = "<group>"; };
+		C29126361D8AA0E600822714 /* check-mark-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-mark-red.png"; sourceTree = "<group>"; };
+		C29126381D8AA2DA00822714 /* SQLiteHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteHelper.swift; sourceTree = "<group>"; };
+		C291263A1D8AA31800822714 /* AlarmRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmRepository.swift; sourceTree = "<group>"; };
+		C291263C1D8AA33800822714 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		C291263E1D8AAA4C00822714 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		C29126401D8AAA8600822714 /* AlarmIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlarmIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2ABD0A71D8949DE001F07CD /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		C2ABD0A91D894A10001F07CD /* math_alarm.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = math_alarm.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C291263F1D8AAA4C00822714 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +105,7 @@
 		860293111D891DBF007672AF = {
 			isa = PBXGroup;
 			children = (
+				C291263E1D8AAA4C00822714 /* libsqlite3.0.tbd */,
 				8602934D1D8931AC007672AF /* Images */,
 				8602931C1D891DBF007672AF /* AlarmIOS */,
 				860293311D891DBF007672AF /* AlarmIOSTests */,
@@ -120,6 +135,10 @@
 				860293291D891DBF007672AF /* Info.plist */,
 				C2ABD0A71D8949DE001F07CD /* Alarm.swift */,
 				C2ABD0A91D894A10001F07CD /* math_alarm.db */,
+				C29126381D8AA2DA00822714 /* SQLiteHelper.swift */,
+				C291263C1D8AA33800822714 /* NotificationHelper.swift */,
+				C291263A1D8AA31800822714 /* AlarmRepository.swift */,
+				C29126401D8AAA8600822714 /* AlarmIOS-Bridging-Header.h */,
 			);
 			path = AlarmIOS;
 			sourceTree = "<group>";
@@ -150,6 +169,8 @@
 				860293501D8931FF007672AF /* h1.png */,
 				860293511D8931FF007672AF /* Wazowski.jpg */,
 				8602934B1D892C8D007672AF /* wazowskiAlarm.png */,
+				C29126341D8A9E9A00822714 /* more-than.png */,
+				C29126361D8AA0E600822714 /* check-mark-red.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -262,11 +283,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2ABD0AA1D894A10001F07CD /* math_alarm.db in Resources */,
+				C29126371D8AA0E600822714 /* check-mark-red.png in Resources */,
 				8602934C1D892C8D007672AF /* wazowskiAlarm.png in Resources */,
 				860293281D891DBF007672AF /* LaunchScreen.storyboard in Resources */,
 				860293551D8931FF007672AF /* Wazowski.jpg in Resources */,
 				860293531D8931FF007672AF /* 2.jpeg in Resources */,
 				860293251D891DBF007672AF /* Assets.xcassets in Resources */,
+				C29126351D8A9E9A00822714 /* more-than.png in Resources */,
 				860293231D891DBF007672AF /* Main.storyboard in Resources */,
 				860293521D8931FF007672AF /* 1.jpg in Resources */,
 				860293541D8931FF007672AF /* h1.png in Resources */,
@@ -294,9 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C291263D1D8AA33800822714 /* NotificationHelper.swift in Sources */,
 				860293201D891DBF007672AF /* ViewController.swift in Sources */,
 				8602931E1D891DBF007672AF /* AppDelegate.swift in Sources */,
 				C2ABD0A81D8949DE001F07CD /* Alarm.swift in Sources */,
+				C291263B1D8AA31800822714 /* AlarmRepository.swift in Sources */,
+				C29126391D8AA2DA00822714 /* SQLiteHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,11 +464,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AlarmIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axample.AlarmIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlarmIOS/AlarmIOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -450,11 +479,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AlarmIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axample.AlarmIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlarmIOS/AlarmIOS-Bridging-Header.h";
 			};
 			name = Release;
 		};
